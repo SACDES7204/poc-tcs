@@ -8,7 +8,7 @@ node("docker") {
         println commit_id
     
         stage "build"
-        def app = docker.build "ci-poc"
+        def app = docker.build "poc-tcs"
     
         stage "publish"
         app.push 'master'
